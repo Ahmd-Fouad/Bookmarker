@@ -79,7 +79,7 @@ siteUrl.addEventListener("input", function () {
 // Display a new bookmark if entered data is validate
 addBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  if (siteName.classList.contains("is-valid") || siteUrl.classList.contains("is-valid")) {
+  if (siteName.classList.contains("is-valid") && siteUrl.classList.contains("is-valid")) {
     addBookmark();
     displayBookmark()
     siteName.value = null;

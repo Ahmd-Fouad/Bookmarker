@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmarks</title>
+  <link rel="shortcut icon" href="./imgs/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="CSS/all.min.css">
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>bookmarker</h1>
+    <div class="adding mb-4">
+      <h2>
+        <i class="fa-solid fa-bookmark"></i>
+        bookmark your favorite sites
+        <i class="fa-solid fa-bookmark"></i>
+      </h2>
+      <form>
+        <div class="mb-3">
+          <label for="bm-name" class="d-block text-start fw-bold mb-1">
+            <i class="fa-solid fa-book-bookmark pe-2 ms-1"></i>
+            <span>Site Name</span>
+          </label>
+          <input type="text" id="bm-name" placeholder="bookmark name" class="form-control">
+        </div>
+        <div class="mb-4">
+          <label for="bm-url" class="d-block text-start fw-bold mb-1">
+            <i class="fa-solid fa-link pe-2"></i>
+            <span>Site URL</span>
+          </label>
+          <input type="text" id="bm-url" placeholder="website URL" class="form-control">
+        </div>
+        <button id="add-btn" class="add-btn text-capitalize">submit</button>
+      </form>
+    </div>
+    <div>
+      <table class="table">
+        <thead class="text-capitalize">
+          <tr>
+            <th scope="col">Index</th>
+            <th scope="col">website name</th>
+            <th scope="col">visit</th>
+            <th scope="col">delete</th>
+          </tr>
+        </thead>
+        <tbody id="bookmarks-list">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="model" class="model-holder position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center d-none">
+    <div class="content p-4 bg-white text-start rounded-3 shadow-lg">
+      <div class="header d-flex justify-content-between align-items-center mb-4">
+        <div class="circles">
+          <span class="d-inline-block rounded-circle"></span>
+          <span class="d-inline-block rounded-circle"></span>
+          <span class="d-inline-block rounded-circle"></span>
+        </div>
+        <i id="close" class="fa-solid fa-xmark fs-3"></i>
+      </div>
+      <p class="fw-bold mb-3">Site Name or Url is not valid, Please follow the rules below :</p>
+      <ul class="list-unstyled ps-2">
+        <li class="position-relative mb-2 ">Site name must contain at least 3 characters</li>
+        <li class="position-relative">Site URL must be a valid one</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+  <script src="JS/main.js"></script>
+</body>
+
+</html>
